@@ -1,15 +1,15 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1196916880" file="C:\Users\hvidi\Desktop\OnePanelFig\OnePanelFig.prj" location="C:\Users\hvidi\Desktop\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="584541757" file="C:\Users\hvidi\Desktop\OnePanelFig\OnePanelFig.prj" location="C:\Users\hvidi\Desktop\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
     <param.appname>OnePanelFig</param.appname>
-    <param.authnamewatermark>Haris Vidimlic, Robert Godin</param.authnamewatermark>
+    <param.authnamewatermark>Haris Vidimlic</param.authnamewatermark>
     <param.email />
-    <param.company>SolarSpec</param.company>
+    <param.company />
     <param.icon />
     <param.icons />
-    <param.summary>Format basic properties of your plots through our GUI</param.summary>
+    <param.summary>Format plots through this GUI</param.summary>
     <param.description />
-    <param.screenshot>C:\Users\hvidi\AppData\Local\Temp\tpd235e657_6c8a_409f_9af1_92b356d6b97f.png</param.screenshot>
-    <param.version>1.5</param.version>
+    <param.screenshot>C:\Users\hvidi\AppData\Local\Temp\tp090303ec_c315_48f0_8e34_973e7c96e5d2.png</param.screenshot>
+    <param.version>1.0</param.version>
     <param.products.name />
     <param.products.id />
     <param.products.version />
@@ -18,9 +18,11 @@
     <param.guid>6cdcf90e-7b5b-4414-8b8d-f5f1f359c4e5</param.guid>
     <unset>
       <param.email />
+      <param.company />
       <param.icon />
       <param.icons />
       <param.description />
+      <param.version />
       <param.products.name />
       <param.products.id />
       <param.products.version />
