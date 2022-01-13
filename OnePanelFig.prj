@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3788254708" file="C:\Users\hvidi\Desktop\OnePanelFig\OnePanelFig.prj" location="C:\Users\hvidi\Desktop\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="1152859328" file="C:\Users\hvidi\Desktop\OnePanelFig\OnePanelFig.prj" location="C:\Users\hvidi\Desktop\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
     <param.appname>OnePanelFig</param.appname>
     <param.authnamewatermark>Haris Vidimlic, Robert Godin</param.authnamewatermark>
     <param.email />
@@ -8,7 +8,7 @@
     <param.icons />
     <param.summary>Format basic properties of your plots through our GUI</param.summary>
     <param.description />
-    <param.screenshot>C:\Users\hvidi\AppData\Local\Temp\tpfd2d8803_8137_4806_a5a1_5ae71dd1a592.png</param.screenshot>
+    <param.screenshot>C:\Users\hvidi\AppData\Local\Temp\tpdadbd3c0_13c1_44e2_98cb_e84f0823140c.png</param.screenshot>
     <param.version>1.5</param.version>
     <param.products.name />
     <param.products.id />
