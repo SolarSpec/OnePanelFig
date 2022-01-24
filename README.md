@@ -17,7 +17,7 @@
     <img src="images/logo.png" alt="SolarSpec" width="80" height="80">
   </a>
 
-<h3 align="center">PIAS GUI</h3>
+<h3 align="center">OnePanelFig GUI</h3>
 
   <p align="center">
     A Graphical User Interface 
