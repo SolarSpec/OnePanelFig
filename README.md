@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SolarSpec/OnePanelFig">
-    <img src="images/logo.png" alt="SolarSpec" width="80" height="80">
+    <img src="images/logo.png" alt="SolarSpec" width="160" height="120">
   </a>
 
 <h3 align="center">OnePanelFig GUI</h3>
