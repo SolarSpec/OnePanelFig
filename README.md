@@ -126,9 +126,9 @@ _For more information on any of the internal functions, please refer to the [MAT
 - [X] Format axes to standard
     - [X] Change aspect ratios to certain useful presets
 - [X] Find multiple open figures and update once one closes
-    - Could scrap update button is we can setup a listener for any new/deleted figs
-- [ ] Format styling
-- [ ] Filter and decimate either/or kinetics
+    - [ ] Could scrap update button if we can setup a listener for any new/deleted figs
+- [X] Format styling
+- [X] Save configuration of settings to some preset file to load later
 
 See the [open issues](https://github.com/SolarSpec/OnePanelFig/issues) for a full list of proposed features (and known issues).
 
@@ -157,7 +157,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the BSD 3-Clause License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -200,4 +200,3 @@ Project Link: [https://github.com/SolarSpec/OnePanelFig](https://github.com/Sola
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/haris-vidimlic-06730019b/
 [product-screenshot]: images/Screenshot.png
-`
