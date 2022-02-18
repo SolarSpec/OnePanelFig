@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="722404371" file="C:\Users\hvidi\Desktop\OnePanelRepo\OnePanelFig.prj" location="C:\Users\hvidi\Desktop\OnePanelRepo" name="OnePanelFig" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="1721311223" file="C:\Users\hvidi\Desktop\OnePanelRepo\OnePanelFig.prj" location="C:\Users\hvidi\Desktop\OnePanelRepo" name="OnePanelFig" target="target.mlapps" target-name="Package App">
     <param.appname>OnePanelFig</param.appname>
     <param.authnamewatermark>Haris Vidimlic, Robert Godin</param.authnamewatermark>
     <param.email />
@@ -8,7 +8,7 @@
     <param.icons />
     <param.summary>Format basic properties of your plots through our GUI</param.summary>
     <param.description />
-    <param.screenshot>C:\Users\hvidi\AppData\Local\Temp\tp5e3572e8_fab5_4839_8894_2a3c96dfdd4f.png</param.screenshot>
+    <param.screenshot>C:\Users\hvidi\AppData\Local\Temp\tpb81ab3a9_d397_4159_ac5e_8038cec8c23b.png</param.screenshot>
     <param.version>2.0</param.version>
     <param.products.name />
     <param.products.id />
@@ -31,7 +31,6 @@
       <file>${PROJECT_ROOT}\OnePanelFig.mlapp</file>
     </fileset.main>
     <fileset.depfun>
-      <file>${PROJECT_ROOT}\external scripts\general.m</file>
       <file>${PROJECT_ROOT}\external scripts\names.m</file>
     </fileset.depfun>
     <fileset.resources />

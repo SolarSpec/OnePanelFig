@@ -1,3 +1,4 @@
+%%% BEGINNING OF SCRIPT
 % General setup
 ax = gca;
 fig = gcf;
