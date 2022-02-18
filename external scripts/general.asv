@@ -1,62 +1,3 @@
-% Import variables
-y_scale = cell(1, 1);
-y_scale{1} = 'Linear';
-
-x_scale = cell(1, 1);
-x_scale{1} = 'Linear';
-
-y_label = cell(1, 1);
-y_label{1} = '';
-
-x_label = cell(1, 1);
-x_label{1} = '';
-
-checkbox = cell(1, 1);
-checkbox{1} = 'false';
-
-legends = cell(1, 1);
-legends{1} = '';
-
-ynot = cell(1, 1);
-ynot{1} = 'false';
-
-xnot = cell(1, 1);
-xnot{1} = 'false';
-
-style = '--';
-
-width = cell(1, 1);
-width{1} = '2';
-
-marker = 'none';
-
-markerSize = cell(1, 1);
-markerSize{1} = '40';
-
-colourType = cell(1, 1);
-colourType{1} = 'Multiple Data Sets';
-
-invertY = cell(1, 1);
-invertY{1} = 'Off';
-
-invertX = cell(1, 1);
-invertX{1} = 'Off';
-
-lowerX = cell(1, 1);
-lowerX{1} = '500';
-
-upperX = cell(1, 1);
-upperX{1} = '4500';
-
-lowerY = cell(1, 1);
-lowerY{1} = '40';
-
-upperY = cell(1, 1);
-upperY{1} = '100';
-
-preset = cell(1, 1);
-preset{1} = 'Default';
-
 % General setup
 ax = gca;
 fig = gcf;
@@ -88,15 +29,15 @@ xlabel(ax,x_label);
 ylabel(ax,y_label);
 
 % Set axes limits
-ax.XLim = [lowerX upperY];
-ax.YLim = [lowerY upperY];
+ax.XLim = [lowerX upperX];
+ax.YLim = [lowerY script.UpperYEditField.Value];
 
 % Set axes scale
 ax.XScale = x_scale;
 ax.YScale = y_scale;
 
 % Set axes orientation
-value = string(invertY);
+value = invertY;
 tf = strcmp(value,'On');
 if tf == 1
     set(ax, 'YDir', 'reverse');
@@ -104,7 +45,7 @@ else
     set(ax, 'YDir', 'normal');
 end
 
-value = string(invertX);
+value = invertX;
 tf = strcmp(value,'On');
 if tf == 1
     set(ax, 'XDir', 'reverse');
@@ -153,7 +94,7 @@ if isempty(findobj(fig,'Type','Scatter')) == 0
         ColorPallet = turbo(NumberOfLines);
     end
     for count = 1:1:NumberOfDataSets
-        plotScatterData(count).Marker = marker;
+        plotScatterData(count).Marker = marker; 
         plotScatterData(count).SizeData = markerSize;
         plotScatterData(count).MarkerEdgeColor = ColorPallet(count,:);
         plotScatterData(count).MarkerFaceColor = plotScatterData(count).MarkerEdgeColor;
@@ -167,7 +108,7 @@ ax.FontSize = 14;
 
 % Get rid of extra white space around figure
 % fig.WindowStyle = 'normal';
-value = preset;
+value = script.FigPresetDropDown.Value;
 % Keep fig stationary, only change aspect ratio
 CurrentFigPos = fig.Position;
 
