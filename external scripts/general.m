@@ -1,62 +1,3 @@
-% Import variables
-y_scale = cell(1, 1);
-y_scale{1} = 'Linear';
-
-x_scale = cell(1, 1);
-x_scale{1} = 'Linear';
-
-y_label = cell(1, 1);
-y_label{1} = '';
-
-x_label = cell(1, 1);
-x_label{1} = '';
-
-checkbox = cell(1, 1);
-checkbox{1} = 'false';
-
-legends = cell(1, 1);
-legends{1} = '';
-
-ynot = cell(1, 1);
-ynot{1} = 'false';
-
-xnot = cell(1, 1);
-xnot{1} = 'false';
-
-style = '--';
-
-width = cell(1, 1);
-width{1} = '2';
-
-marker = 'none';
-
-markerSize = cell(1, 1);
-markerSize{1} = '40';
-
-colourType = cell(1, 1);
-colourType{1} = 'Multiple Data Sets';
-
-invertY = cell(1, 1);
-invertY{1} = 'Off';
-
-invertX = cell(1, 1);
-invertX{1} = 'Off';
-
-lowerX = cell(1, 1);
-lowerX{1} = '500';
-
-upperX = cell(1, 1);
-upperX{1} = '4500';
-
-lowerY = cell(1, 1);
-lowerY{1} = '40';
-
-upperY = cell(1, 1);
-upperY{1} = '100';
-
-preset = cell(1, 1);
-preset{1} = 'Default';
-
 % General setup
 ax = gca;
 fig = gcf;
@@ -79,24 +20,24 @@ ax.YMinorTick = 'on';
 ax.TickLength = [0.03 0.01];
 
 % Make axes bold if checked
-if checkbox == true
+if checkbox{1} == true
     ax.FontWeight = 'bold';
 end
 
 % Set axes labels
-xlabel(ax,x_label);
-ylabel(ax,y_label);
+xlabel(ax,x_label{1});
+ylabel(ax,y_label{1});
 
 % Set axes limits
-ax.XLim = [lowerX upperY];
-ax.YLim = [lowerY upperY];
+ax.XLim = [lowerX{1} upperX{1}];
+ax.YLim = [lowerY{1} upperY{1}];
 
 % Set axes scale
-ax.XScale = x_scale;
-ax.YScale = y_scale;
+ax.XScale = x_scale{1};
+ax.YScale = y_scale{1};
 
 % Set axes orientation
-value = string(invertY);
+value = invertY{1};
 tf = strcmp(value,'On');
 if tf == 1
     set(ax, 'YDir', 'reverse');
@@ -104,7 +45,7 @@ else
     set(ax, 'YDir', 'normal');
 end
 
-value = string(invertX);
+value = invertX{1};
 tf = strcmp(value,'On');
 if tf == 1
     set(ax, 'XDir', 'reverse');
@@ -113,13 +54,13 @@ else
 end
 
 % Set data format
-if xnot == true
+if xnot{1} == true
     ax.XRuler.Exponent = 1;
 else
     ax.XRuler.Exponent = 0;
 end
 
-if ynot == true
+if ynot{1} == true
     ax.YRuler.Exponent = 1;
 else
     ax.YRuler.Exponent = 0;
@@ -130,16 +71,16 @@ end
 if isempty(findobj(fig,'Type','Line')) == 0
     plotLineData = findobj(fig,'Type','Line');
     NumberOfLines = size(plotLineData,1);
-    if colourType == "Multiple Data Sets"
+    if colourType{1} == "Multiple Data Sets"
         ColorPallet = distinguishable_colors(NumberOfLines);
     else
         ColorPallet = turbo(NumberOfLines);
     end
     for count = 1:1:NumberOfLines
         ax.LineStyleOrder = style;
-        plotLineData(count).LineWidth = width;
+        plotLineData(count).LineWidth = width{1};
         plotLineData(count).Color = ColorPallet(count,:);
-        legend(split(legends, ";"),'Location','best','fontsize',12) %Change legend entries in the curly brackets as needed
+        legend(split(legends{1}, ";"),'Location','best','fontsize',12) %Change legend entries in the curly brackets as needed
     end
     legend('boxoff');
 end
@@ -154,10 +95,10 @@ if isempty(findobj(fig,'Type','Scatter')) == 0
     end
     for count = 1:1:NumberOfDataSets
         plotScatterData(count).Marker = marker;
-        plotScatterData(count).SizeData = markerSize;
+        plotScatterData(count).SizeData = markerSize{1};
         plotScatterData(count).MarkerEdgeColor = ColorPallet(count,:);
         plotScatterData(count).MarkerFaceColor = plotScatterData(count).MarkerEdgeColor;
-        legend(split(legends, ";"),'Location','best','fontsize',12) %Change legend entries in the curly brackets as needed
+        legend(split(legends{1}, ";"),'Location','best','fontsize',12) %Change legend entries in the curly brackets as needed
     end
     legend('boxoff');
 end
@@ -167,7 +108,7 @@ ax.FontSize = 14;
 
 % Get rid of extra white space around figure
 % fig.WindowStyle = 'normal';
-value = preset;
+value = preset{1};
 % Keep fig stationary, only change aspect ratio
 CurrentFigPos = fig.Position;
 
