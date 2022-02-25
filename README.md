@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/SolarSpec/OnePanelFig">
-    <img src="images/logo.png" alt="SolarSpec" width="160" height="120">
+    <img src="OnePanelFig_resources/logo.png" alt="SolarSpec" width="160" height="120">
   </a>
 
 <h3 align="center">OnePanelFig GUI</h3>
@@ -68,7 +68,6 @@
 
 [![OnePanelFig Screenshot][product-screenshot]](https://solarspec.ok.ubc.ca/)
 Format basic properties of your plots through our GUI
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -76,7 +75,7 @@ Format basic properties of your plots through our GUI
 ### Built With
 
 * [MATLAB](https://www.mathworks.com/products/matlab.html)
-
+* [Image Processing Toolbox](https://www.mathworks.com/help/images/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -88,7 +87,8 @@ To begin using this app is very simple. Just verify you have the necessary prequ
 
 ### Prerequisites
 
-Make sure MATLAB is installed. It is available for download in the Software Distribution section under the Help tab after you log into Canvas. [https://canvas.ubc.ca/](https://canvas.ubc.ca/)
+Make sure MATLAB is installed. It is available for download in the Software Distribution section under the Help tab after you log into [Canvas.](https://canvas.ubc.ca/)
+Click on the "Add-Ons" dropdown menu of your MATLAB Home screen. Then click on "Manage Add-Ons" and ensure you have the 'Image Processing Toolbox.' If not, click on "Get Add-Ons" button instead and search for the aforementioned products.
 
 ### Installation
 
@@ -112,7 +112,22 @@ Make sure MATLAB is installed. It is available for download in the Software Dist
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This app is currently lacking in any examples to be shown as it is still being created
+Here is a simple example of the app being used for a line and scatter plot. We start off with no plots and we are instructed to open our figures and then update the app configuration. First we plot our sample data and then press the "Update" button on the GUI.
+
+_Please note that the app will automatically update the GUI when one of your figures is closed but it needs to be updated manually each time a figure is created._
+
+  <figure>
+    <img src="OnePanelFig_resources/EmptyFigures.png" alt="Empty">
+    <figcaption> Figure 1: Boot the application </figcaption>
+  </figure>
+  <figure>
+    <img src="OnePanelFig_resources/TestCode.png" alt="Test">
+    <figcaption> Figure 2: Plot your data </figcaption>
+  </figure>
+  <figure>
+    <img src="OnePanelFig_resources/Update.png" alt="Update">
+    <figcaption> Figure 3: Update your GUI with the update buton</figcaption>
+  </figure>
 
 _For more information on any of the internal functions, please refer to the [MATLAB Documentation](https://www.mathworks.com/help/matlab/)_
 
@@ -123,10 +138,11 @@ _For more information on any of the internal functions, please refer to the [MAT
 <!-- ROADMAP -->
 ## Roadmap
 
-- [X] Format axes to standard
-    - [X] Change aspect ratios to certain useful presets
+- [X] Format axes to a standard
+- [X] Change aspect ratios to certain useful presets
 - [X] Find multiple open figures and update once one closes
-    - [ ] Could scrap update button if we can setup a listener for any new/deleted figs
+- [X] Added special close request to update available figures after one close
+  - [ ] Could somehow find a way to auto update when new figures are plotted
 - [X] Format styling
 - [X] Save configuration of settings to some preset file to load later
 
@@ -199,4 +215,4 @@ Project Link: [https://github.com/SolarSpec/OnePanelFig](https://github.com/Sola
 [license-url]: https://github.com/SolarSpec/OnePanelFig/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/haris-vidimlic-06730019b/
-[product-screenshot]: images/Screenshot.png
+[product-screenshot]: OnePanelFig_resources/Screenshot.png
