@@ -129,6 +129,18 @@ _Please note that the app will automatically update the GUI when one of your fig
     <figcaption> Figure 3: Update your GUI with the update buton</figcaption>
   </figure>
 
+
+Next, in the specific case that you mix data types in your plot (e.g. scatter data with line data), the GUI will automatically recognize the line data as a "fit line" and won't configure its properties. If the line data is not a fit line or you want to alter its properties in general, you can use the Property Editor as shown below for ease of use:
+
+  <figure>
+    <img src="OnePanelFig_resources/PropEditor1.png" alt="Empty">
+    <figcaption> Figure 4: Click on the view tool and choose property editor </figcaption>
+  </figure>
+  <figure>
+    <img src="OnePanelFig_resources/PropEditor2.png" alt="Test">
+    <figcaption> Figure 5: Next click on the graphics object you would like to edit. At the bottom you can alter its properties </figcaption>
+  </figure>
+
 _For more information on any of the internal functions, please refer to the [MATLAB Documentation](https://www.mathworks.com/help/matlab/)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
