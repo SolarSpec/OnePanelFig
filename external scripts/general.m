@@ -56,52 +56,93 @@ end
 
 % Set data format
 if xnot{1} == true
-    ax.XRuler.Exponent = 1;
+    mag = floor(log(abs(ax.XLim(2)))./log(10));
+    ax.XRuler.Exponent = mag;
 else
     ax.XRuler.Exponent = 0;
 end
 
 if ynot{1} == true
-    ax.YRuler.Exponent = 1;
+    mag = floor(log(abs(ax.YLim(2)))./log(10));
+    ax.YRuler.Exponent = mag;
 else
     ax.YRuler.Exponent = 0;
 end
 
 
-% Set data properties
-if isempty(findobj(fig,'Type','Line')) == 0
-    plotLineData = findobj(fig,'Type','Line');
-    NumberOfLines = size(plotLineData,1);
-    if colourType{1} == "Multiple Data Sets"
-        ColorPallet = distinguishable_colors(NumberOfLines);
-    else
-        ColorPallet = turbo(NumberOfLines);
+%%Set data properties
+% Find all objects in axes and size
+Objects = flipud(allchild(ax));
+
+for i = 1:size(Objects,1)
+    if strcmp(Objects(i,1).Type,"constantline")
+        Objects(i) = []; % Erase any ylines from list
     end
-    for count = 1:1:NumberOfLines
-        ax.LineStyleOrder = style;
-        plotLineData(count).LineWidth = width{1};
-        plotLineData(count).Color = ColorPallet(count,:);
-        legend(split(legends{1}, ";"),'Location','best','fontsize',12) %Change legend entries in the curly brackets as needed
-    end
-    legend('boxoff');
 end
 
-if isempty(findobj(fig,'Type','Scatter')) == 0
-    plotScatterData = findobj(fig,'Type','Scatter');
-    NumberOfDataSets = size(plotScatterData,1);
-    if colourType == "Multiple Data Sets"
-        ColorPallet = distinguishable_colors(NumberOfDataSets);
-    else
-        ColorPallet = turbo(NumberOfLines);
+% Find type
+try
+    type = Objects.Type;
+    typeString = convertCharsToStrings(type(1,:));
+catch
+    % If line is mixed with scatter (e.g. in a fit plot)
+    for i = 1:size(Objects,1)
+        %                     typeArray(i,1) = convertCharsToStrings(Objects(i,1).Type);
+        if strcmp(Objects(i,1).Type,"line")
+            Objects(i) = []; % Erase any fit lines from list and only edit scatter
+        end
     end
-    for count = 1:1:NumberOfDataSets
-        plotScatterData(count).Marker = marker;
-        plotScatterData(count).SizeData = markerSize{1};
-        plotScatterData(count).MarkerEdgeColor = ColorPallet(count,:);
-        plotScatterData(count).MarkerFaceColor = plotScatterData(count).MarkerEdgeColor;
-        legend(split(legends{1}, ";"),'Location','best','fontsize',12) %Change legend entries in the curly brackets as needed
+    typeString = 'scatter';
+end
+
+% Find number of gobjects and split legend names
+Num = size(Objects,1);
+names = split(legends{1}, {',',';'});
+names = strtrim(names);
+
+if colourType{1} == "Multiple Data Sets"
+    ColorPallet = distinguishable_colors(Num);
+else
+    ColorPallet = turbo(Num);
+end
+
+% Determine the type of plot (LINE?)
+if strcmp(typeString, 'line') == 1
+
+    if style == "Solid"
+        ax.LineStyleOrder = '-';
+    elseif style == "Dashed"
+        ax.LineStyleOrder = '--';
+    elseif style == "Dotted"
+        ax.LineStyleOrder = ':';
+    elseif style == "Dash-Dot"
+        ax.LineStyleOrder = '-.';
     end
-    legend('boxoff');
+
+    for count = 1:1:Num
+        Objects(count).Marker = marker;
+        Objects(count).MarkerSize = markerSize{1};
+        Objects(count).LineWidth = width{1};
+        Objects(count).Color = ColorPallet(count,:);
+        Objects(count).DisplayName = names{count,1};
+    end
+
+elseif strcmp(typeString, 'scatter') == 1 % Determine the type of plot (SCATTER?)
+
+    for count = 1:1:Num
+        Objects(count).Marker = marker;
+        Objects(count).SizeData = markerSize{1};
+        Objects(count).MarkerEdgeColor = ColorPallet(count,:);
+        Objects(count).MarkerFaceColor = Objects(count).MarkerEdgeColor;
+        Objects(count).DisplayName = names{count,1};
+    end
+end
+
+l = legend(Objects,'Location','best','fontsize',12,'Box','off');
+if legends{1}(count,:) == ""
+    l.Visible = false;
+else
+    l.Visible = true;
 end
 
 % Add last to ensure the font changes for all prompts
