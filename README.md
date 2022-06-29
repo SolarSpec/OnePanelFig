@@ -111,10 +111,15 @@ Click on the "Add-Ons" dropdown menu of your MATLAB Home screen. Then click on "
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+To begin, an external plot from a general script/command is needed. Multiple plots can be opened at once but the most recent/current figure will be focused on first. At the top of the middle panel, the figures dropdown object will display all figures currently opened but will not automatically update when a new plot is created and so the update button directly below it can be pressed to fix this issue. 
+
+The left panel handles most of the outer axes properties such as the scales, labels and notation. There is also an edit field for the legend names of each graphical object in the current plot, but there must be the same amount of names as there are objects or more. The middle panel handles the style of these objects such as the line type and width or marker type and size, as well as the colour. The right panel handles inversion of each axis, the axes limits, presetted aspect ratios of the figure, and the loading and saving of the current GUI values. 
+
+There is also an extra "Script" button that takes these GUI values and stitches them to a general script (.m) file that can recreate the current setup. The script is saved in the current MATLAB folder and will automatically open it in the editor but it can only open the first script. A new script will generate for each time the button is pressed and will reflect in the filename (i.e. script_1, script_2, script_3,etc.) but MATLAB can only open the first script automatically due to unavoidable hardcoded strings.
 
 Here is a simple example of the app being used for a line and scatter plot. We start off with no plots and we are instructed to open our figures and then update the app configuration. First we plot our sample data and then press the "Update" button on the GUI.
 
-_Please note that the app will automatically update the GUI when one of your figures is closed but it needs to be updated manually each time a figure is created._
+_Please note that the app will automatically update the GUI when one of your figures is closed but it needs to be updated manually each time a new figure is created._
 
   <figure>
     <img src="OnePanelFig_resources/EmptyFigures.png" alt="Empty">
