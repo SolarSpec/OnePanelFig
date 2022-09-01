@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="30075158" file="C:\Users\hvidi\Desktop\OnePanelRepo\OnePanelFig.prj" location="C:\Users\hvidi\Desktop\OnePanelRepo" name="OnePanelFig" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="2729085603" file="C:\Users\hvidi\Desktop\Platform-Repo\OnePanelFig\OnePanelFig.prj" location="C:\Users\hvidi\Desktop\Platform-Repo\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
     <param.appname>OnePanelFig</param.appname>
     <param.authnamewatermark>Haris Vidimlic, Robert Godin</param.authnamewatermark>
     <param.email>vidihari@student.ubc.ca</param.email>
@@ -12,7 +12,7 @@
     </param.icons>
     <param.summary>Format basic properties of your plots through our GUI</param.summary>
     <param.description />
-    <param.screenshot>C:\Users\hvidi\AppData\Local\Temp\tpb850330e_5810_4f54_81f0_2c52f74fd215.png</param.screenshot>
+    <param.screenshot>C:\Users\hvidi\AppData\Local\Temp\tp3e1670cf_1579_4c71_80b1_0848b86da364.png</param.screenshot>
     <param.version>2.0</param.version>
     <param.products.name>
       <item>MATLAB</item>
@@ -38,12 +38,13 @@
       <file>${PROJECT_ROOT}\OnePanelFig.mlapp</file>
     </fileset.main>
     <fileset.depfun>
+      <file>${PROJECT_ROOT}\OnePanelFig_resources\icon-mat-palette.png</file>
       <file>${PROJECT_ROOT}\OnePanelFig_resources\logo.png</file>
     </fileset.depfun>
     <fileset.resources />
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\hvidi\Desktop" name="OnePanelRepo" optional="false">C:\Users\hvidi\Desktop\OnePanelRepo</file>
+      <file location="C:\Users\hvidi\Desktop\Platform-Repo" name="OnePanelFig" optional="false">C:\Users\hvidi\Desktop\Platform-Repo\OnePanelFig</file>
     </build-deliverables>
     <workflow />
     <matlab>

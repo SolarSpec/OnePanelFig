@@ -123,7 +123,13 @@ if strcmp(typeString, 'line') == 1
         Objects(count).Marker = marker;
         Objects(count).MarkerSize = markerSize{1};
         Objects(count).LineWidth = width{1};
-        Objects(count).Color = ColorPallet(count,:);
+
+        if ~indices(count) % Determing type of coloring
+            Objects(count).Color = ColorPallet(count,:);
+        else
+            Objects(count).Color = individuals(count,:);
+        end
+
         Objects(count).DisplayName = names{count,1};
     end
 
@@ -132,14 +138,20 @@ elseif strcmp(typeString, 'scatter') == 1 % Determine the type of plot (SCATTER?
     for count = 1:1:Num
         Objects(count).Marker = marker;
         Objects(count).SizeData = markerSize{1};
-        Objects(count).MarkerEdgeColor = ColorPallet(count,:);
+
+        if ~indices(count) % Determing type of coloring
+            Objects(count).MarkerEdgeColor = ColorPallet(count,:);
+        else
+            Objects(count).MarkerEdgeColor = individuals(count,:);
+        end
+
         Objects(count).MarkerFaceColor = Objects(count).MarkerEdgeColor;
         Objects(count).DisplayName = names{count,1};
     end
 end
 
 l = legend(Objects,'Location','best','fontsize',12,'Box','off');
-if legends{1}(count,:) == ""
+if legends(count,:) == ""
     l.Visible = false;
 else
     l.Visible = true;
