@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="3689523379" file="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig\OnePanelFig.prj" location="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3337777942" file="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig\OnePanelFig.prj" location="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
     <param.appname>OnePanelFig</param.appname>
     <param.authnamewatermark>Haris Vidimlic, Robert Godin</param.authnamewatermark>
     <param.email>vidihari@student.ubc.ca</param.email>
@@ -12,7 +12,7 @@
     </param.icons>
     <param.summary>Format basic properties of your plots through our GUI</param.summary>
     <param.description />
-    <param.screenshot>C:\Users\Haris\AppData\Local\Temp\tp248ebed9_45b4_43b8_91b6_76dc05a90b01.png</param.screenshot>
+    <param.screenshot>C:\Users\Haris\AppData\Local\Temp\tp96bb8ac4_78fd_4452_bdbd_2da674bdfe92.png</param.screenshot>
     <param.version>2.0</param.version>
     <param.products.name>
       <item>MATLAB</item>
