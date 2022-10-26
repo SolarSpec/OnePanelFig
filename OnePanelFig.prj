@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="877962688" file="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig\OnePanelFig.prj" location="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3341945114" file="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig\OnePanelFig.prj" location="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
     <param.appname>OnePanelFig</param.appname>
     <param.authnamewatermark>Haris Vidimlic, Robert Godin</param.authnamewatermark>
     <param.email>vidihari@student.ubc.ca</param.email>
@@ -12,8 +12,8 @@
     </param.icons>
     <param.summary>Format basic properties of your plots through our GUI</param.summary>
     <param.description />
-    <param.screenshot>C:\Users\Haris\AppData\Local\Temp\tp6157f65a_a92d_485e_aaed_5765cca458bf.png</param.screenshot>
-    <param.version>2.0</param.version>
+    <param.screenshot>C:\Users\Haris\AppData\Local\Temp\tp31983384_278d_443a_9025_e5aaa6432dc6.png</param.screenshot>
+    <param.version>3.0</param.version>
     <param.products.name>
       <item>MATLAB</item>
       <item>Image Processing Toolbox</item>
