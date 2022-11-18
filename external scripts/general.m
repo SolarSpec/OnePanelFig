@@ -69,6 +69,9 @@ else
     ax.YRuler.Exponent = 0;
 end
 
+% Set tick spacing
+ax.XTick = lowerX{1}:tickspace{1}:upperX{1};
+
 
 %%Set data properties
 % Find all objects in axes and size
@@ -151,7 +154,7 @@ elseif strcmp(typeString, 'scatter') == 1 % Determine the type of plot (SCATTER?
 end
 
 l = legend(Objects,'Location','best','fontsize',12,'Box','off');
-if legends(count,:) == ""
+if isempty(names) || names(count,:) == ""
     l.Visible = false;
 else
     l.Visible = true;
