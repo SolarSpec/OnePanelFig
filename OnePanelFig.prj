@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="1166839091" file="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig\OnePanelFig.prj" location="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="3938521493" file="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig\OnePanelFig.prj" location="C:\Users\Haris\Desktop\Platform-Repo\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
     <param.appname>OnePanelFig</param.appname>
     <param.authnamewatermark>Haris Vidimlic, Robert Godin</param.authnamewatermark>
     <param.email>vidihari@student.ubc.ca</param.email>
@@ -12,7 +12,7 @@
     </param.icons>
     <param.summary>Format basic properties of your plots through our GUI</param.summary>
     <param.description />
-    <param.screenshot>C:\Users\Haris\AppData\Local\Temp\tpacf61cb1_e864_43b9_9d54_c47b0a2b0df8.png</param.screenshot>
+    <param.screenshot>C:\Users\Haris\AppData\Local\Temp\tp61c15b5e_ce0e_4217_9ad3_26bf9dba8c6e.png</param.screenshot>
     <param.version>3.0</param.version>
     <param.products.name>
       <item>MATLAB</item>
@@ -23,8 +23,8 @@
       <item>17</item>
     </param.products.id>
     <param.products.version>
-      <item>9.12</item>
-      <item>11.5</item>
+      <item>9.13</item>
+      <item>11.6</item>
     </param.products.version>
     <param.platforms />
     <param.output>${PROJECT_ROOT}</param.output>
@@ -48,7 +48,7 @@
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>F:\MATLAB\R2022a</root>
+      <root>H:\Program Files\MATLAB\R2022b</root>
       <toolboxes>
         <toolbox name="matlabcoder" />
         <toolbox name="embeddedcoder" />
