@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="4071583112" file="C:\Users\mirac\OneDrive\Desktop\SolarSPEC\GitFolders\OnePanelFig\OnePanelFig.prj" location="C:\Users\mirac\OneDrive\Desktop\SolarSPEC\GitFolders\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="1255878957" file="C:\Users\mirac\OneDrive\Desktop\SolarSPEC\GitFolders\OnePanelFig\OnePanelFig.prj" location="C:\Users\mirac\OneDrive\Desktop\SolarSPEC\GitFolders\OnePanelFig" name="OnePanelFig" target="target.mlapps" target-name="Package App">
     <param.appname>OnePanelFig</param.appname>
     <param.authnamewatermark>Haris Vidimlic, Robert Godin</param.authnamewatermark>
     <param.email>vidihari@student.ubc.ca</param.email>
@@ -12,7 +12,7 @@
     </param.icons>
     <param.summary>Format basic properties of your plots through our GUI</param.summary>
     <param.description />
-    <param.screenshot>C:\Users\mirac\AppData\Local\Temp\tp32a0fc66_bdb2_476e_8aea_d2cdf6090cbd.png</param.screenshot>
+    <param.screenshot>C:\Users\mirac\AppData\Local\Temp\tpd577a8f9_8870_4bdb_9caa_c4d6bb5409dc.png</param.screenshot>
     <param.version>3.0</param.version>
     <param.products.name>
       <item>MATLAB</item>
